@@ -1,12 +1,10 @@
 import { Schema, model } from "mongoose";
 import { Types } from "mongoose";
-
-
 const UserSchema = new Schema({
-    userName: { type: String, unique: true, required: true },
-    email: { type: String, unique: true },
-    password: String
+    email: { type: String, unique: true, required: true },
+    password: { type: String , required: true }
 })
+
 const ContentSchema = new Schema({
     link: { type: String, required: true },
     type: { type: String, required: true },
@@ -15,7 +13,7 @@ const ContentSchema = new Schema({
 })
 const linkSchema = new Schema({
     hash: { type: String, required: true },
-    userId: { type: Types.ObjectId, ref: "User", required: true, unique: true }
+    userId: { type: Types.ObjectId, required: true }
 })
 
 const userModel = model("User", UserSchema)

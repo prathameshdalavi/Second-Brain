@@ -3,11 +3,11 @@ import { ReactElement } from "react"
 interface ButtonProps {
     variant: "primary" | "secondary",
     text: string,
-    starticon?: ReactElement,
     size: "sm" | "md" | "lg",
+    starticon?: ReactElement,
     onClick?: () => void,
 }
-const sizeClasses = {
+const sizeClasses =  {
     sm: "px-2 py-1 text-sm rounded-md",
     md: "px-4 py-2 text-md rounded-md",
     lg: "px-8 py-4 text-lg rounded-md"
