@@ -4,7 +4,7 @@ interface  SideBarItemProps{
     text:string
 }
 export const SideBarItem=(props:SideBarItemProps)=>{
-    return <div className="flex text-gray-800 cursor-pointer  justify-center  transition-all duration-500 hover:bg-gray-200  items-center gap-2">
+    return <div className="flex gap-2 items-center">
         {props.icon}
         {props.text}
     </div>

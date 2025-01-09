@@ -11,6 +11,7 @@ export interface CardProps {
 
 export const Card = (props: CardProps) => {
 
+    
     useEffect(() => {
         if (props.type === "twitter") {
             const script = document.createElement("script");
